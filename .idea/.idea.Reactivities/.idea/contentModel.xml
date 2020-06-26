@@ -173,6 +173,8 @@
           <e p="20191116032259_AddedCommentEntity.Designer.cs" t="Include" />
           <e p="20191116055056_AddedFollowingEntity.cs" t="Include" />
           <e p="20191116055056_AddedFollowingEntity.Designer.cs" t="Include" />
+          <e p="20200528054454_RefreshTokens.cs" t="Include" />
+          <e p="20200528054454_RefreshTokens.Designer.cs" t="Include" />
           <e p="20200529140126_RefreshToken.cs" t="Include" />
           <e p="20200529140126_RefreshToken.Designer.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
