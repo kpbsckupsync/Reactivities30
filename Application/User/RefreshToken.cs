@@ -30,7 +30,6 @@ namespace Application.User
                 _userManager = userManager;
                 _jwtGenerator = jwtGenerator;
             }
-            }
 
             public async Task<User> Handle(Query request, CancellationToken cancellationToken)
             {
