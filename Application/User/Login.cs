@@ -56,6 +56,7 @@ namespace Application.User
                 {
                     user.RefreshToken = _jwtGenerator.GenerateRefreshToken();
                     user.RefreshTokenExpiry = DateTime.Now.AddDays(30);
+
                     await _userManager.UpdateAsync(user);
 
                     return new User

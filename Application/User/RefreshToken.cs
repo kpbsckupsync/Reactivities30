@@ -24,19 +24,17 @@ namespace Application.User
         {
             private readonly UserManager<AppUser> _userManager;
             private readonly IJwtGenerator _jwtGenerator;
-            private readonly IUserAccessor _userAccessor;
 
-            public Handler(UserManager<AppUser> userManager, IJwtGenerator jwtGenerator, IUserAccessor userAccessor)
+            public Handler(UserManager<AppUser> userManager, IJwtGenerator jwtGenerator)
             {
                 _userManager = userManager;
                 _jwtGenerator = jwtGenerator;
-                _userAccessor = userAccessor;
+            }
             }
 
             public async Task<User> Handle(Query request, CancellationToken cancellationToken)
             {
                 var user = await _userManager.FindByNameAsync(request.Username);
-                
                 if (user == null || user.RefreshToken != request.RefreshToken || user.RefreshTokenExpiry < DateTime.Now)
                     throw new RestException(HttpStatusCode.Unauthorized);
 
